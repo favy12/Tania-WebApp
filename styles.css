@@ -1,0 +1,277 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background-color: #fff;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: pink;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hero {
+    background-image: url('small%20knotless%20braids.jpg');
+    background-size: cover;
+    background-position: top;
+    color: #fff;
+    text-align: center;
+    padding: 350px 20px;
+    font-size: 2rem;
+}
+
+.services-section {
+    padding: 50px 20px;
+    background-color: pink;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.booking-section {
+    padding: 50px 20px;
+    background-color: pink;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.booking-form input,
+.booking-form select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.policy-checklist {
+    display: flex;
+    flex-direction: column;
+}
+
+.policy-checklist input {
+    margin-bottom: 10px;
+}
+
+#book-now-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#book-now-btn:disabled {
+    background-color: #ddd;
+}
+
+.payment-details {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.gallery-section {
+    padding: 50px 20px;
+    background-color: pink;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.reviews-section {
+    padding: 50px 20px;
+    background-color: pink;
+}
+
+.review-form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.reviews-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-section {
+    padding: 50px 20px;
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info, .about-tania {
+    flex: 1 1 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-info p, .about-tania p {
+    margin: 10px 0;
+}
+
+.social-media a {
+    color: #000;
+    margin: 0 5px;
+    font-size: 1.5rem;
+}
+
+.about-tania-content {
+    display: flex;
+    gap: 20px;
+}
+
+.about-tania-content img {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: pink ;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-container, .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-tania-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-tania-content img {
+        width: 100px;
+        height: 100px;
+    }
+}

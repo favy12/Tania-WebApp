@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Service Braiding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Tania Braids</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-icon">&#9776;</div>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Welcome to Our Braiding Service</h1>
+        <p>Professional home-service braiding at your convenience</p>
+    </section>
+    
+    <section id="services" class="services-section">
+        <h2>Our Top Services</h2>
+        <div class="services-container">
+            <!-- Service cards here -->
+            <div class="service-card">
+                <img src="braid 4.jpg" alt="Wig Install">
+                <h3>Wig Install</h3>
+                <p>$80+</p>
+                <p>2 hr 0 min</p>
+                <button class="see-times-btn">See Times</button>
+            </div>
+            <div class="service-card">
+                <img src="braid 3.jpg" alt="Bohemian Twists">
+                <h3>Bohemian Twists</h3>
+                <p>$80+</p>
+                <p>2 hr 0 min</p>
+                <button class="see-times-btn" data-service="bohemian-twists">See Times</button>
+            </div>
+            <div class="service-card">
+                <img src="braid 5.jpg" alt="Knotless Braids">
+                <h3>Knotless Braids</h3>
+                <p>$80+</p>
+                <p>2 hr 0 min</p>
+                <button class="see-times-btn" data-service="knotless-braids">See Times</button>
+            </div>
+            <div class="service-card">
+                <img src="braid 9.jpg" alt="Large Knotless Braids">
+                <h3>Large Knotless Braids</h3>
+                <p>$80+</p>
+                <p>2 hr 0 min</p>
+                <button class="see-times-btn" data-service="large-knotless-braids">See Times</button>
+            </div>
+            <div class="service-card">
+                <img src="braiding_style_2.jpg" alt="Small Knotless Braids">
+                <h3>Small Knotless Braids</h3>
+                <p>$80+</p>
+                <p>2 hr 0 min</p>
+                <button class="see-times-btn" data-service="small-knotless-braids">See Times</button>
+            </div>
+            <div class="service-card">
+                <img src="stitch braids (2).JPG" alt="Stitch Braids">
+                <h3>Stitch Braids</h3>
+                <p>$80+</p>
+                <p>2 hr 0 min</p>
+                <button class="see-times-btn" data-service="stitch-braids">See Times</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="booking" class="booking-section">
+        <h2>Book an Appointment</h2>
+        <div class="booking-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" required>
+            
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+            
+            <label for="service">Service:</label>
+            <select id="service" onchange="updateSpecificServices()" required>
+                <option value="">Select Service</option>
+                <option value="knotless-braid">Knotless Braid</option>
+                <option value="box-braid">Box Braid</option>
+                <option value="knotless-bohemian-braids">Knotless Bohemian Braids</option>
+                <option value="island-twist">Island Twist</option>
+                <option value="bohemian-island-twist">Bohemian Island Twist</option>
+                <option value="fulani-bohemian-braids">Fulani Bohemian Braids</option>
+                <option value="soft-locs">Soft Locs</option>
+                <option value="stitch-braids">Stitch Braids</option>
+                <option value="crochet">Crochet</option>
+                <option value="touch-up">Touch Up</option>
+                <option value="hair-wash-blow-dry">Hair Wash and Blow Dry</option>
+                <option value="takeout">Takeout</option>
+                <option value="mens-braids">Men's Braids</option>
+                <option value="frontal-installation">Frontal Installation</option>
+                <option value="wig-revamps">Wig Revamps</option>
+                <option value="hair-ventilation">Hair Ventilation</option>
+                <!-- Other options here -->
+            </select>
+            
+            <label for="specific-service">Specific Service/Length/Type:</label>
+            <select id="specific-service" onchange="updatePrice()" required>
+                <option value="">Select Specific Service</option>
+            </select>
+            
+            <label for="price">Price:</label>
+            <input type="text" id="price" readonly>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" onchange="updateTimeSlots()" required>
+            
+            <label for="time">Time:</label>
+            <select id="time" required>
+                <option value="">Select Time</option>
+                <option value="9am">9:00 AM - 2:00 PM</option>
+                <option value="3pm">3:00 PM - 9:00 PM</option>
+                <!-- Other options for other styles -->
+            </select>
+            
+            <label for="policy">Policies:</label>
+            <div class="policy-checklist">
+                <input type="checkbox" id="policy1" required> <label for="policy1">A non-refundable $20 deposit is required to book an appointment.</label><br>
+                <input type="checkbox" id="policy2" required> <label for="policy2">If you’re 30 minutes late, a $10 late fee will be applied.</label><br>
+                <input type="checkbox" id="policy3" required> <label for="policy3">Do not apply oil on your hair before the appointment.</label><br>
+                <input type="checkbox" id="policy4" required> <label for="policy4">No extra guests allowed during the appointment.</label><br>
+                <input type="checkbox" id="policy5" required> <label for="policy5">Cancel within 48 hours to reschedule within 30 days.</label><br>
+                <input type="checkbox" id="policy6" required> <label for="policy6">Travel fee of $10 per mile for in-house appointments (max 30 miles).</label><br>
+            </div>
+            
+            <button id="book-now-btn" onclick="showPaymentDetails()" disabled>Book Now</button>
+        </div>
+        <div id="payment-details" class="payment-details" style="display:none;">
+            <h3>Payment Details</h3>
+            <p>Bank Account: 123456789</p>
+            <p>Account Name: Braiding Service</p>
+            <p>Please transfer the deposit amount to confirm your booking.</p>
+            <button onclick="confirmBooking()">Confirm Booking</button>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <!-- Gallery images here -->
+            <img src="braid 5.jpg" alt="Braiding work">
+            <img src="braid 9.jpg" alt="Braiding work">
+            <img src="braid 3.jpg" alt="Braiding work">
+            <img src="braid 6.jpg" alt="Braiding work">
+            <img src="braid 7.jpg" alt="Braiding work">
+            <img src="braid 11.jpg" alt="Braiding work">
+            <img src="braid 2.jpg" alt="Braiding work">
+            <img src="braid 8.jpg" alt="Braiding work">
+            <img src="braid 4.jpg" alt="Braiding work">
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div class="review-form">
+            <label for="review-name">Name:</label>
+            <input type="text" id="review-name">
+            
+            <label for="review-text">Review:</label>
+            <textarea id="review-text"></textarea>
+            
+            <button onclick="submitReview()">Submit Review</button>
+        </div>
+        <div class="reviews-container" id="reviews-container">
+            <!-- Reviews will be displayed here -->
+            <h1>Beautiful</h1>
+            <p>Beautiful</p>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> tania@example.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Address:</strong> 123 Braiding St, Hair City, HC 12345</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="about-tania">
+            <h2>About Tania</h2>
+            <div class="about-tania-content">
+                <img src="tonia.jpg" alt="Tania">
+                <p>Tania is a professional hair braider with over 10 years of experience. She specializes in home-service braiding, bringing convenience and style to your doorstep.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Home Service Braiding. All rights reserved.</p>
+    </footer>
+    <script>
+    
+        document.addEventListener('DOMContentLoaded', () => {
+        const navIcon = document.querySelector('.nav-icon');
+        const navbar = document.querySelector('.navbar ul');
+    
+        navIcon.addEventListener('click', () => {
+            navbar.classList.toggle('show');
+        });
+    
+        const policies = document.querySelectorAll('.policy-checklist input');
+        const bookNowBtn = document.getElementById('book-now-btn');
+    
+        policies.forEach(policy => {
+            policy.addEventListener('change', () => {
+                bookNowBtn.disabled = !Array.from(policies).every(p => p.checked);
+            });
+        });
+    });
+    
+    function updateSpecificServices() {
+        const service = document.getElementById('service').value;
+        const specificService = document.getElementById('specific-service');
+        
+        specificService.innerHTML = ''; // Clear existing options
+    
+        if (service === 'knotless-braids') {
+    specificService.innerHTML = `
+        <option value="">Select Specific Service</option>
+        <option value="small-knotless">Small Knotless</option>
+        <option value="medium-knotless">Medium Knotless</option>
+        <option value="large-knotless">Large Knotless</option>
+    `;
+} else if (service === 'box-braids') {
+    specificService.innerHTML = `
+        <option value="">Select Specific Service</option>
+        <option value="thin-box-braids">Thin Box Braids</option>
+        <option value="medium-box-braids">Medium Box Braids</option>
+        <option value="jumbo-box-braids">Jumbo Box Braids</option>
+    `;
+}
+// Add more conditions for other services
+
+        if (service === 'knotless-braids') {
+            specificService.innerHTML = `
+                <option value="">Select Specific Service</option>
+                <option value="small-knotless">Small Knotless</option>
+                <option value="medium-knotless">Medium Knotless</option>
+                <option value="large-knotless">Large Knotless</option>
+            `;
+            
+        }if (service === 'knotless-braids') {
+            specificService.innerHTML = `
+                <option value="">Select Specific Service</option>
+                <option value="small-knotless">Small Knotless</option>
+                <option value="medium-knotless">Medium Knotless</option>
+                <option value="large-knotless">Large Knotless</option>
+            `;
+            
+        }if (service === 'knotless-braids') {
+            specificService.innerHTML = `
+                <option value="">Select Specific Service</option>
+                <option value="small-knotless">Small Knotless</option>
+                <option value="medium-knotless">Medium Knotless</option>
+                <option value="large-knotless">Large Knotless</option>
+            `;
+            
+        }if (service === 'knotless-braids') {
+            specificService.innerHTML = `
+                <option value="">Select Specific Service</option>
+                <option value="small-knotless">Small Knotless</option>
+                <option value="medium-knotless">Medium Knotless</option>
+                <option value="large-knotless">Large Knotless</option>
+            `;
+            
+        }
+    }
+    
+    function updatePrice() {
+        const specificService = document.getElementById('specific-service').value;
+        const price = document.getElementById('price');
+    
+        if (specificService === 'small-knotless') {
+            price.value = '$200';
+        } else if (specificService === 'medium-knotless') {
+            price.value = '$150';
+        } else if (specificService === 'large-knotless') {
+            price.value = '$100';
+        } else {
+            price.value = '';
+        }
+    }
+    
+    function updateTimeSlots() {
+        const date = new Date(document.getElementById('date').value);
+        const time = document.getElementById('time');
+        
+        time.innerHTML = ''; // Clear existing options
+    
+        if (date.getDay() === 0 || date.getDay() === 6) {
+            time.innerHTML = `
+                <option value="">Select Time</option>
+                <option value="9am">9:00 AM - 2:00 PM</option>
+                <option value="3pm">3:00 PM - 9:00 PM</option>
+            `;
+        } else {
+            time.innerHTML = `
+                <option value="">Select Time</option>
+                <option value="5pm">5:00 PM - 10:00 PM</option>
+            `;
+        }
+    }
+    
+    function showPaymentDetails() {
+        document.getElementById('payment-details').style.display = 'block';
+    }
+    
+    function confirmBooking() {
+        alert('Booking confirmed! Please transfer the deposit amount to complete your booking.');
+    }
+    
+    function submitReview() {
+        const name = document.getElementById('review-name').value;
+        const text = document.getElementById('review-text').value;
+        
+        if (name && text) {
+            const reviewsContainer = document.getElementById('reviews-container');
+            const review = document.createElement('div');
+            review.className = 'review';
+            review.innerHTML = `<strong>${name}</strong><p>${text}</p>`;
+            reviewsContainer.appendChild(review);
+    
+            document.getElementById('review-name').value = '';
+            document.getElementById('review-text').value = '';
+        } else {
+            alert('Please fill in both fields before submitting your review.');
+        }
+    }
+    </script>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
