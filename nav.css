@@ -48,6 +48,11 @@
 
     }
 
+    .hamburger{
+        position: fixed;
+        top: 3.2%;
+        right: 5.2%;
+    }
     .hamburger.active{
         position: absolute;
         top: 3.2%;
