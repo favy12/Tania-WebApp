@@ -34,11 +34,6 @@ header {
     text-decoration: none;
 }
 
-.nav-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
 
 .hero {
     background-image: url('small%20knotless%20braids.jpg');
