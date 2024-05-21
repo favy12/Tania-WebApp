@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -16,6 +19,17 @@ header {
     align-items: center;
     padding: 20px;
     background-color: pink;
+}
+
+header{
+    position: fixed;
+    width: 98%;
+}
+@media screen and (min-width: 1441px) {
+    header{
+        position: fixed;
+        width: 99% !important;
+    }
 }
 
 .navbar ul {
@@ -46,7 +60,7 @@ header {
     background-position: top;
     color: #fff;
     text-align: center;
-    padding: 350px 20px;
+    padding: 210px 20px;
     font-size: 2rem;
 }
 @media screen and (min-width: 1440px) {
@@ -54,6 +68,12 @@ header {
         background-position: center 35%;
     }
 }
+/* @media screen and(min-width:801px) {
+    .hamburger{
+        display: none !important;
+    }
+    
+} */
 
 .see-times-btn{
     background-color: pink;
@@ -96,7 +116,7 @@ header {
 
 .service-card img {
     width: 100%;
-    height: auto;
+    height: 350px;
 }
 
 .service-card h3 {
@@ -256,7 +276,7 @@ footer {
     color: #fff;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .navbar ul {
         display: none;
         flex-direction: column;
@@ -275,7 +295,7 @@ footer {
     .nav-icon {
         display: block;
     }
-}
+} */
 
 @media (max-width: 600px) {
     .services-container, .gallery-container {
