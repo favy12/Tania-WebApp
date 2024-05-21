@@ -18,6 +18,11 @@ header {
     background-color: pink;
 }
 
+header{
+    position: fixed;
+    width: 100%;
+}
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -46,7 +51,7 @@ header {
     background-position: top;
     color: #fff;
     text-align: center;
-    padding: 350px 20px;
+    padding: 210px 20px;
     font-size: 2rem;
 }
 @media screen and (min-width: 1440px) {
@@ -256,7 +261,7 @@ footer {
     color: #fff;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .navbar ul {
         display: none;
         flex-direction: column;
@@ -275,7 +280,7 @@ footer {
     .nav-icon {
         display: block;
     }
-}
+} */
 
 @media (max-width: 600px) {
     .services-container, .gallery-container {
