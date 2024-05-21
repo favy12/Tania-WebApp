@@ -20,11 +20,19 @@
     opacity: 0;
 }
 
+@media screen and (min-width: 801px) {
+    .hamburger {
+        display: none !important;
+    }
+}
+
+
+
+
 @media screen and (max-width:800px) {
 .navMenu{
     position: fixed;
     top: -100%;
-    /* height: 50vh; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -42,7 +50,8 @@
     
     .navMenu.active{
         position: fixed;
-        margin-top:50px;
+        padding-top:50px;
+        padding-bottom: 25px;
         top: 10.5%;
         right: 0%;
 
@@ -54,7 +63,7 @@
         right: 5.2%;
     }
     .hamburger.active{
-        position: absolute;
+        position: fixed;
         top: 3.2%;
         right: 5.2%;
         z-index: 15;
