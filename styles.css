@@ -48,11 +48,8 @@ header{
     text-decoration: none;
 }
 
-.nav-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
+
+
 
 .hero {
     background-image: url('small%20knotless%20braids.jpg');
@@ -90,7 +87,7 @@ header{
 
 .services-section {
     padding: 50px 20px;
-    background-color: pink;
+    background-color: whitesmoke;
 }
 
 .services-container {
@@ -127,6 +124,11 @@ header{
 .booking-section {
     padding: 50px 20px;
     background-color: pink;
+}
+
+.booking-section h2 {color: black;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .booking-form {
@@ -187,7 +189,7 @@ header{
 
 .gallery-section {
     padding: 50px 20px;
-    background-color: pink;
+    background-color: white;
 }
 
 .gallery-container {
@@ -211,6 +213,17 @@ header{
 .reviews-section {
     padding: 50px 20px;
     background-color: pink;
+    text-align: left;
+}
+
+.reviews-section h2 {
+    
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+
+    
+
 }
 
 .review-form {
@@ -229,6 +242,20 @@ header{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.Submit{
+    width: 30%;
+    padding: 10px;
+    margin: 20px;
+    background-color: pink;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: right;
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .contact-section {
@@ -260,6 +287,8 @@ header{
 .about-tania-content {
     display: flex;
     gap: 20px;
+    text-align: justify;
+    
 }
 
 .about-tania-content img {

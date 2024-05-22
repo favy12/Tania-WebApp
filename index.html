@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -30,7 +31,7 @@
     </header>
     
     <section id="home" class="hero">
-        <h1>Welcome to Our Braiding Service</h1>
+        <h1>Welcome to Tania Braids</h1>
         <p>Professional home-service braiding at your convenience</p>
     </section>
     
@@ -41,7 +42,7 @@
             <div class="service-card">
                 <img src="braid 4.jpg" alt="Wig Install">
                 <h3>Wig Install</h3>
-                <p>$80+</p>
+                <p>$120+</p>
                 <p>2 hr 0 min</p>
                 <button class="see-times-btn">See Times</button>
             </div>
@@ -62,24 +63,40 @@
             <div class="service-card">
                 <img src="braid 9.jpg" alt="Large Knotless Braids">
                 <h3>Large Knotless Braids</h3>
-                <p>$80+</p>
+                <p>$220+</p>
                 <p>2 hr 0 min</p>
                 <button class="see-times-btn" data-service="large-knotless-braids">See Times</button>
             </div>
             <div class="service-card">
                 <img src="braiding_style_2.jpg" alt="Small Knotless Braids">
                 <h3>Small Knotless Braids</h3>
-                <p>$80+</p>
+                <p>$260+</p>
                 <p>2 hr 0 min</p>
                 <button class="see-times-btn" data-service="small-knotless-braids">See Times</button>
             </div>
             <div class="service-card">
                 <img src="stitch braids (2).JPG" alt="Stitch Braids">
                 <h3>Stitch Braids</h3>
+                <p>$100+</p>
+                <p>2 hr 0 min</p>
+                <button class="see-times-btn" data-service="stitch-braids">See Times</button>
+            </div>
+             <div class="service-card">
+                <img src="small knotless boho braids.jpg" alt="Stitch Braids">
+                <h3>knotless bohemain braids</h3>
+                <p>$280+</p>
+                <p>2 hr 0 min</p>
+                <button class="see-times-btn" data-service="stitch-braids">See Times</button>
+            </div>
+            <div class="service-card">
+                <img src="men braids.JPG" alt="Stitch Braids">
+                <h3>Men braids</h3>
                 <p>$80+</p>
                 <p>2 hr 0 min</p>
                 <button class="see-times-btn" data-service="stitch-braids">See Times</button>
             </div>
+
+
         </div>
     </section>
     
@@ -99,7 +116,7 @@
             <input type="text" id="location" required>
             
             <label for="service">Service:</label>
-            <select id="service" onchange="updateSpecificServices()" required>
+            <select id="service" onchange="updateSpecificServices()" name="service" required>
                 <option value="">Select Service</option>
                 <option value="knotless-braid">Knotless Braid</option>
                 <option value="box-braid">Box Braid</option>
@@ -121,15 +138,15 @@
             </select>
             
             <label for="specific-service">Specific Service/Length/Type:</label>
-            <select id="specific-service" onchange="updatePrice()" required>
+            <select id="specific-service" onchange="updatePrice()" name="specific-service" required>
                 <option value="">Select Specific Service</option>
             </select>
             
             <label for="price">Price:</label>
-            <input type="text" id="price" readonly>
+            <input type="text" id="price" name="price" readonly>
             
             <label for="date">Date:</label>
-            <input type="date" id="date" onchange="updateTimeSlots()" required>
+            <input type="date" id="date" onchange="updateTimeSlots()" name="time-slot" required>
             
             <label for="time">Time:</label>
             <select id="time" required>
@@ -149,12 +166,12 @@
                 <input type="checkbox" id="policy6" required> <label for="policy6">Travel fee of $10 per mile for in-house appointments (max 30 miles).</label><br>
             </div>
             
-            <button id="book-now-btn" onclick="showPaymentDetails()" disabled>Book Now</button>
+            <button id="book-now" onclick="showPaymentDetails()" disabled>Book Now</button>
         </div>
         <div id="payment-details" class="payment-details" style="display:none;">
             <h3>Payment Details</h3>
-            <p>Bank Account: 123456789</p>
-            <p>Account Name: Braiding Service</p>
+            <p>Bank Account: Taniaton001@gmail.com</p>
+            <p>Account: Zelle</p>
             <p>Please transfer the deposit amount to confirm your booking.</p>
             <button onclick="confirmBooking()">Confirm Booking</button>
         </div>
@@ -170,14 +187,18 @@
             <img src="braid 6.jpg" alt="Braiding work">
             <img src="braid 7.jpg" alt="Braiding work">
             <img src="braid 11.jpg" alt="Braiding work">
-            <img src="braid 2.jpg" alt="Braiding work">
+            <img src="short braids.jpg" alt="Braiding work">
             <img src="braid 8.jpg" alt="Braiding work">
             <img src="braid 4.jpg" alt="Braiding work">
+            <img src="braiding_style_1.jpg" alt="Braiding work">
+            <img src="soft locs.JPG" alt="Braiding work">
+            <img src="medium island twists.jpg" alt="Braiding work">
+            <img src="long braid.jpg" alt="Braiding work">
         </div>
     </section>
 
     <section id="reviews" class="reviews-section">
-        <h2>Customer Reviews</h2>
+        <h2>Hear what our Customers say about us</h2>
         <div class="review-form">
             <label for="review-name">Name:</label>
             <input type="text" id="review-name">
@@ -185,7 +206,7 @@
             <label for="review-text">Review:</label>
             <textarea id="review-text"></textarea>
             
-            <button onclick="submitReview()">Submit Review</button>
+            <button onclick="submitReview()" class="Submit  ">Submit Review</button>
         </div>
         <div class="reviews-container" id="reviews-container">
             <!-- Reviews will be displayed here -->
@@ -198,13 +219,13 @@
     <section id="contact" class="contact-section">
         <div class="contact-info">
             <h2>Contact Us</h2>
-            <p><strong>Email:</strong> tania@example.com</p>
-            <p><strong>Phone:</strong> +123 456 7890</p>
-            <p><strong>Address:</strong> 123 Braiding St, Hair City, HC 12345</p>
+            <p><strong>Email:</strong> Taniaton001@gmail.com</p>
+            <p><strong>Phone:</strong> +1 (260) 888-9043</p>
+            <p><strong>Address:</strong> FortWayne IN </p>
             <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61550855031441&mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/fort_wayne_hairbraider?igsh=OG43YXplNXAzcjV1&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@fortwayne_hairbraider?_t=8k6SpF4kT4E&_r=1"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
         <div class="about-tania">
