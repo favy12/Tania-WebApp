@@ -43,7 +43,7 @@
     right: 0%;
     background-color:black;
     transition: all 0.3s ease-in-out;
-    z-index: 9999;
+    z-index: 99;
     text-align: center;
     /* box-shadow: 2px 5px 5px rgb(170, 164, 164); */
 }

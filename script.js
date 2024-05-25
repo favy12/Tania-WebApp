@@ -16,7 +16,27 @@
                 bookNowBtn.disabled = !Array.from(policies).every(p => p.checked);
             });
         });
+
+        const datePicker = document.getElementById('date-picker');
+        const now = new Date();
+
+        
+        if (now.getHours() >= 18) {
+            
+            now.setDate(now.getDate() + 1);
+        }
+
+        
+        const minDate = now.toISOString().split('T')[0];
+
+       
+        datePicker.setAttribute('min', minDate);
+
+        
+        datePicker.value = minDate;
     });
+
+    
 
 
     
